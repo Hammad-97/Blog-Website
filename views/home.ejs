@@ -1,0 +1,16 @@
+<%- include("partials/header.ejs") %>
+
+
+<h1>Home</h1>
+<p><%= homeContent %></p>
+
+<% arrPosts.forEach(function(post){ %>
+
+    <% let c=post.content;%>
+    <h1><%= post.title %></h1>
+    <p><%= c.substring(0,100) + " ..."; %><a href="/posts/<%= post.title %>">Read More</a></p>
+    <%});%>
+
+
+
+<%- include("partials/footer.ejs") %>
